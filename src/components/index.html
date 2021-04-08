@@ -5,7 +5,7 @@
     <title>Schedule App</title>
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../styles/font-awesome-5.15.3/css/fontawesome.min.css" />
     <link rel="stylesheet" href="../styles/slider/slider.css" />
     <link rel="stylesheet" href="../styles/slider/round.css" />
 
@@ -123,20 +123,20 @@
 <script src="../styles/jquery.min.js"></script>
 <script src="../styles/basics.min.js"></script>
 <script src="../styles/bootstrap/bootstrap.min.js"></script>
-<script src="../styles/script/slidebar.js"></script>
+<script src="../styles/script/slider-custom.js"></script>
 <script src="../styles/jquery/jquery-stable.js"></script>
 <script src="../styles/jquery/jquery-toaster.css"></script>
 <script src="../styles/slider/slick.js"></script>
 <script src="../styles/slider/circle.js"></script>
 
 <!-- Insert this line after script imports -->
-<script>
+<script type="text/javascript" >
     if (window.module) module = window.module;
 
     const { navBar } = require('../siteMaster');
 
-    const { timeTableEnum } = require('../systemConst');
-    const { objProx } = require('../services/systemSessionContainer');
+    // const { timeTableEnum } = require('../systemConst');
+    // const { objProx } = require('../services/systemSessionContainer');
 
     const electron = require('electron');
     const { ipcRenderer } = electron;
