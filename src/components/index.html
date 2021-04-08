@@ -3,6 +3,51 @@
 <head>
     <meta charset="UTF-8" />
     <title>Schedule App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        /* Remove extra left and right margins, due to padding */
+        .row {margin: 0 -5px;}
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Style the counter cards */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+    </style>
+
+
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="../styles/font-awesome-5.15.3/css/fontawesome.min.css" />
@@ -19,85 +64,67 @@
     <div id="navBarID" class="wrapper d-flex align-items-stretch" style="height: 100%">
 
         <!-- Page Content  -->
+
         <div class="w-100" >
             <div class="w-100 title-custom">
                 <h2 class="title-font-custom">Shedule App</h2>
             </div>
+
             <div>
+
                 <div class="card margin-1-custom" >
                     <section class="iq-features">
                         <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col-lg-3 col-md-12"></div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="holderCircle">
-                                        <div class="round"></div>
-                                        <div class="dotCircle">
-                           <span class="itemDot active itemDot1" data-tab="1">
-                           <i class="fa fa-clock-o"></i>
-                           <span class="forActive"></span>
-                           </span>
-                                            <span class="itemDot itemDot2" data-tab="2">
-                           <i class="fa fa-comments"></i>
-                           <span class="forActive"></span>
-                           </span>
-                                            <span class="itemDot itemDot3" data-tab="3">
-                           <i class="fa fa-user"></i>
-                           <span class="forActive"></span>
-                           </span>
-                                            <span class="itemDot itemDot4" data-tab="4">
-                           <i class="fa fa-tags"></i>
-                           <span class="forActive"></span>
-                           </span>
-                                            <span class="itemDot itemDot5" data-tab="5">
-                           <i class="fa fa-upload"></i>
-                           <span class="forActive"></span>
-                           </span>
-                                            <span class="itemDot itemDot6" data-tab="6">
-                           <i class="fa fa-briefcase"></i>
-                           <span class="forActive"></span>
-                           </span>
-                                        </div>
-                                        <div class="contentCircle" >
-                                            <div class="CirItem title-box active CirItem1">
+                            <div class="row">
+
+                                <div class="column">
+                                            <div class="card">
                                                 <h2 class="title"><span>Time Tables</span></h2>
                                                 <p>Timetables are a kind of schedule that sets out times at which specific events are intended to occur. </p>
                                                 <i class="fa fa-clock-o"></i>
                                             </div>
-
-                                            <div class="CirItem title-box CirItem2">
+                                </div>
+                                    <div class="column">
+                                            <div class="card">
                                                 <h2 class="title"><span>Chat </span></h2>
                                                 <p>If there is any problem contact us viva	0382299668 or	@schduleapp@lk</p>
                                                 <i class="fa fa-comments"></i>
                                             </div>
-
-                                            <div class="CirItem title-box CirItem3">
+                                    </div>
+                                <div class="column">
+                                            <div class="card">
                                                 <h2 class="title"><span>About Us</span></h2>
                                                 <p>We are a leading non-state degree awarding institute approved by the University Grants Commission (UGC) under the Universities Act. Contact Us : 0112277665</p>
                                                 <i class="fa fa-user"></i>
                                             </div>
-
-                                            <div class="CirItem title-box CirItem4">
+                                </div>
+                                    <div class="column">
+                                            <div class="card">
                                                 <h2 class="title"><span>Management</span></h2>
                                                 <p>We are proud to announce that our industry internship programmes with leading multinational and local organizations in Sri Lanka.</p>
                                                 <i class="fa fa-tags"></i>
                                             </div>
-                                            <div class="CirItem title-box CirItem5">
+                                    </div>
+                                        <div class="column">
+                                            <div class="card">
                                                 <h2 class="title"><span>Schedule App</span></h2>
                                                 <p>In here contain the all the group details,progarmme and time tabels details ect.</p>
                                                 <i class="fa fa-upload"></i>
                                             </div>
-                                            <div class="CirItem title-box CirItem6">
+                                        </div>
+                                            <div class="column">
+                                            <div class="card">
                                                 <h2 class="title"><span>Support</span></h2>
                                                 <p>If there is any issue, you can get support viva support.@gmail.com</p>
                                                 <i class="fa fa-briefcase"></i>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-12"></div>
+
                             </div>
                         </div>
+
+
+
                     </section>
                 </div>
             </div>
@@ -130,7 +157,7 @@
 <script src="../styles/slider/circle.js"></script>
 
 <!-- Insert this line after script imports -->
-<script>
+<script type="text/javascript" >
     if (window.module) module = window.module;
 
     const { navBar } = require('../siteMaster');

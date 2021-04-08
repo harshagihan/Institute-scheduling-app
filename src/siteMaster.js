@@ -7,7 +7,12 @@ const navBar = `
             </button>
         </div>
         <div class="p-4">
-            <h1><a href="./workingDaysHrs.html" class="logo">A B C <span>Schedule App</span></a></h1>
+         <h1><a href="./index.html" class="logo">A B C <span>Schedule App</span></a></h1>
+<!--            <ul class="list-unstyled components mb-5">-->
+<!--                <li id="liHome" >-->
+<!--                    <a  href="./index.html"><span class="fa fa-home mr-3"></span>Home</a>-->
+<!--                </li>-->
+<!--            <h1><a href="./workingDaysHrs.html" class="logo">A B C <span>Schedule App</span></a></h1>-->
             <ul class="list-unstyled components mb-5">
                 <li id="liHome" >
                     <a  href="./workingDaysHrs.html"><span class="fa fa-home mr-3"></span>Home</a>
@@ -19,7 +24,7 @@ const navBar = `
                     <a href="./workingDaysHours.html"><span class="fa fa-briefcase mr-3"></span>Working days and hours</a>
                 </li>
                 <li id="liSubjects">
-                    <a href="./staff.html"><span class="fa fa-paperclip mr-3"></span>Subjects</a>
+                    <a href="./subjects.html"><span class="fa fa-paperclip mr-3"></span>Subjects</a>
                 </li>
                 <li id="liTags">
                     <a href="./tags.html"><span class="fa fa-tag mr-3"></span>Tags</a>
