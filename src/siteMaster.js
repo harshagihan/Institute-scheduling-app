@@ -7,6 +7,11 @@ const navBar = `
             </button>
         </div>
         <div class="p-4">
+         <h1><a href="./index.html" class="logo">A B C <span>Schedule App</span></a></h1>
+            <ul class="list-unstyled components mb-5">
+                <li id="liHome" >
+                    <a  href="./index.html"><span class="fa fa-home mr-3"></span>Home</a>
+                </li>
             <h1><a href="./workingDaysHrs.html" class="logo">A B C <span>Schedule App</span></a></h1>
             <ul class="list-unstyled components mb-5">
                 <li id="liHome" >
