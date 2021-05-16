@@ -141,7 +141,7 @@
     function AddNewAcademicYearSemeseter(){
 
         $.confirm({
-            title: 'New Academic Year and Semeseter!',
+            title: 'New Academic Year and Semester...',
             content: '' +
                 '<div>' +
                 '<div class="form-group">' +
@@ -158,18 +158,18 @@
 
                         //check the name is not empty value
                         if (!name) {
-                            $.alert('provide a valid Academic Year and Semeseter');
+                            $.alert('Provide a valid Academic Year and Semester');
                             return false;
                         }
 
                         const splitVal = name.split('.');
                         if(splitVal.length !== 2){
-                            $.alert('wrong format ! use format like \n Y1.S1 ');
+                            $.alert('Wrong format ! use format like \n Y1.S1 ');
                             return false;
                         }
 
                         if(splitVal[0].length !== 2 && splitVal[1].length !==2){
-                            $.alert('wrong format ! use format like \n Y1.S1 ');
+                            $.alert('Wrong format ! use format like \n Y1.S1 ');
                             return false;
                         }
 
