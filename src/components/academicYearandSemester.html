@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <title>Schedule App</title>
     <link rel="stylesheet" href="../index.css" />
-    <link rel="stylesheet" href="../public/boostrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../public/style/slider-custom.css" />
-    <link rel="stylesheet" href="../public/jConfirm/jquery-confirm.min.css" />
-    <link rel="stylesheet" href="../public/jtoaster/jquery.toast.min.css" />
-    <link rel="stylesheet" href="../public/datatable/jquery.dataTables.min.css" />
-    <link rel="stylesheet" href="../public/style/back-button-custom.css" />
-    <link rel="stylesheet" href="../public/style/custom-back.css" />
+    <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../styles/font-awesome-5.15.3/font-awesome.css" />
+    <link rel="stylesheet" href="../styles/css/slider-custom.css" />
+    <link rel="stylesheet" href="../styles/jquery/jquery.css" />
+    <link rel="stylesheet" href="../styles/jquery/jquery-toaster.css" />
+<!--    <link rel="stylesheet" href="../styles/datatable/jquery.dataTables.min.css" />-->
+    <link rel="stylesheet" href="../styles/css/back-button-custom.css" />
+    <link rel="stylesheet" href="../styles/css/custom-back.css" />
 
 </head>
 <body>
@@ -68,13 +68,13 @@
 </script>
 
 <!-- normal script imports etc  -->
-<script src="../public/jquery.min.js"></script>
-<script src="../public/popper.min.js"></script>
-<script src="../public/boostrap/bootstrap.min.js"></script>
-<script src="../public/script/slider-custom.js"></script>
-<script src="../public/jConfirm/jquery-confirm.min.js"></script>
-<script src="../public/jtoaster/jquery.toast.min.js"></script>
-<script src="../public/datatable/jquery.dataTables.min.js"></script>
+<script src="../styles/jquery.min.js"></script>
+<script src="../styles/basics.min.js"></script>
+<script src="../styles/bootstrap/bootstrap.min.js"></script>
+<script src="../styles/script/slider-custom.js"></script>
+<script src="../styles/jquery/jquery-stable.js"></script>
+<script src="../styles/jquery/jquery.toaster.js"></script>
+<!--<script src="../styles/datatable/jquery.dataTables.min.js"></script>-->
 
 <!-- Insert this line after script imports -->
 <script>
@@ -141,7 +141,7 @@
     function AddNewAcademicYearSemeseter(){
 
         $.confirm({
-            title: 'New Academic Year and Semeseter!',
+            title: 'New Academic Year and Semester...',
             content: '' +
                 '<div>' +
                 '<div class="form-group">' +
@@ -158,18 +158,18 @@
 
                         //check the name is not empty value
                         if (!name) {
-                            $.alert('provide a valid Academic Year and Semeseter');
+                            $.alert('Provide a valid Academic Year and Semester');
                             return false;
                         }
 
                         const splitVal = name.split('.');
                         if(splitVal.length !== 2){
-                            $.alert('wrong format ! use format like \n Y1.S1 ');
+                            $.alert('Wrong format ! use format like \n Y1.S1 ');
                             return false;
                         }
 
                         if(splitVal[0].length !== 2 && splitVal[1].length !==2){
-                            $.alert('wrong format ! use format like \n Y1.S1 ');
+                            $.alert('Wrong format ! use format like \n Y1.S1 ');
                             return false;
                         }
 
