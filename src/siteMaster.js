@@ -21,7 +21,7 @@ const navBar = `
                     <a  href="./timetables.html"><span class="fa fa-home mr-3"></span>TimeTables</a>
                 </li>
                 <li id="liWorkingDays">
-                    <a href="./workingDaysHours.html"><span class="fa fa-briefcase mr-3"></span>Working days and hours</a>
+                    <a href="./components/workingDaysHrs.html"><span class="fa fa-briefcase mr-3"></span>Working days and hours</a>
                 </li>
                 <li id="liSubjects">
                     <a href="./subjects.html"><span class="fa fa-paperclip mr-3"></span>Subjects</a>
