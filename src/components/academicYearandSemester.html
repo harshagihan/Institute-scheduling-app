@@ -200,11 +200,11 @@
     //edit  Academic Year and Semeseter data
     function editAcademicYearSemeseter(id){
         $.confirm({
-            title: 'Edit Academic Year and Semeseter!',
+            title: 'Edit Academic Year and Semester!',
             content: '' +
                 '<div>' +
                 '<div class="form-group">' +
-                '<label>Enter Academic Year and Semeseter</label>' +
+                '<label>Enter Academic Year and Semester</label>' +
                 '<input type="text" placeholder="Academic Year and Semeseter" class="name form-control" required />' +
                 '</div>' +
                 '</div>',
@@ -218,7 +218,7 @@
                     action: function () {
                         var name = this.$content.find('.name').val();
                         if (!name) {
-                            $.alert('provide a Academic Year and Semeseter');
+                            $.alert('provide a Academic Year and Semester');
                             return false;
                         }
 
