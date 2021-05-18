@@ -19,7 +19,7 @@ const navBar = `
                     <a href="./workingDaysHours.html"><span class="fa fa-briefcase mr-3"></span>Working days and hours</a>
                 </li>
                 <li id="liSubjects">
-                    <a href="./staff.html"><span class="fa fa-paperclip mr-3"></span>Subjects</a>
+                    <a href="./subjects.html"><span class="fa fa-paperclip mr-3"></span>Subjects</a>
                 </li>
                 <li id="liTags">
                     <a href="./tags.html"><span class="fa fa-tag mr-3"></span>Tags</a>
