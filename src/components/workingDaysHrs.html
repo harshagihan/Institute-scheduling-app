@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <title>Schedule App</title>
     <link rel="stylesheet" href="../index.css" />
-    <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="../styles/font-awesome-5.15.3/css/fontawesome.min.css" />
-<!--    <link rel="stylesheet" href="../styles/slider/slider.css" />-->
-    <link rel="stylesheet" href="../styles/css/slider-custom.css"/>
-    <link rel="stylesheet" href="../styles/css/hours-custom.css" />
-    <link rel="stylesheet" href="../styles/css/material-custom.css" />
-    <link rel="stylesheet" href="../styles/jquery/jquery.css" />
-    <link rel="stylesheet" href="../styles/jquery/jquery-toaster.css" />
+    <link rel="stylesheet" href="../public/boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../public/style/slider-custom.css" />
+    <link rel="stylesheet" href="../public/style/hours-custom.css" />
+    <link rel="stylesheet" href="../public/style/material-custom.css" />
+    <link rel="stylesheet" href="../public/jConfirm/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../public/jtoaster/jquery.toast.min.css" />
 
     <style>
         .card-body {
@@ -27,10 +26,12 @@
 <div class="row" style="position: relative;width: calc(100vw - 2px);height: 100%;">
 
     <div id="navBarID" class="wrapper d-flex align-items-stretch" style="height: 100%">
+
+
         <!-- Page Content  -->
         <div class="w-100">
             <div class="w-100 title-custom">
-                <h2 class="title-font-custom">Configure working days and hours <span style="cursor: pointer" onclick="changeScheduleType()" class="badge badge-secondary" id="txtTableType">Weekend</span></h2>
+                <h2 class="title-font-custom">Add working days and hours <span style="cursor: pointer" onclick="changeScheduleType()" class="badge badge-secondary" id="txtTableType">Weekend</span></h2>
             </div>
             <div>
                 <div class="card margin-1-custom">
@@ -47,7 +48,7 @@
 
             </div>
             <div>
-                <button type="button" id="btnSaveAssign" class="btn btn-success float-right" style="display: none" onclick="SaveData()">Save & Assign Timetable Slots</button>
+                <button type="button" id="btnSaveAssign" class="btn btn-success float-right" style="display: none" onclick="SaveData()">Assign Timetable Slots</button>
             </div>
         </div>
 
@@ -68,12 +69,12 @@
 </script>
 
 <!-- normal script imports etc  -->
-<script src="../styles/jquery.min.js"></script>
-<script src="../styles/basics.min.js"></script>
-<script src="../styles/bootstrap/bootstrap.min.js"></script>
-<script src="../styles/script/slider-custom.js"></script>
-<script src="../styles/jquery/jquery-stable.js"></script>
-<script src="../styles/jquery/jquery.toaster.js"></script>
+<script src="../public/jquery.min.js"></script>
+<script src="../public/popper.min.js"></script>
+<script src="../public/boostrap/bootstrap.min.js"></script>
+<script src="../public/script/slider-custom.js"></script>
+<script src="../public/jConfirm/jquery-confirm.min.js"></script>
+<script src="../public/jtoaster/jquery.toast.min.js"></script>
 
 <!-- Insert this line after script imports -->
 <script>
@@ -90,7 +91,7 @@
     //$.getScript('../systemConst.js');
     //$.getScript('../services/systemSessionContainer.js');
 
-    const { jsonHasKeyValFoRDays } = require('../services/commonServices');
+    const { jsonHasKeyValFoRDays } = require('../services/applicationServices/commonServices');
 
     $(window).on("load", function () {
         $("#navBarID").prepend(navBar);
