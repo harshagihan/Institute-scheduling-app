@@ -56,3 +56,11 @@ app.on('activate', () => {
         createWindow();
     }
 });
+global.share.ipcMain.on('print-data', async (event, data) => {
+
+});
+require('./services/facilityDataServices');
+require('./services/departmentDataServices');
+require('./services/centerDataServices');
+require('./services/buildingDataServices');
+require('./services/roomDataServices');
