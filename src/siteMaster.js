@@ -43,7 +43,10 @@ const navBar = `
                 </li>
                 <li id="liGeneralSettings">
                 <a href="./generalSettings.html"><span class="fa fa-list mr-3"></span>Schedule Management</a>
-            </li>
+                </li>
+                <li id="liSettings">
+                <a href="./location.html"><span class="fa fa-location-arrow mr-3"></span>Location</a>
+                </li>
                 <li id="liSettings">
                     <a href="./settings.html"><span class="fa fa-cogs mr-3"></span>Settings</a>
                 </li>
