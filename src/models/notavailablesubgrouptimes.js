@@ -2,11 +2,8 @@
 const {
   Model
 } = require('sequelize');
-
-const { Days } = require('./days');
-
 module.exports = (sequelize, DataTypes) => {
-  class WorkingData extends Model {
+  class NotAvailableSubGroupTimes extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -16,23 +13,16 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  WorkingData.init({
-    day: {
-      type : DataTypes.INTEGER,
-      references: {
-        model: 'Days',
-        key: 'id'
-      }
-    },
-    time: DataTypes.STRING,
-    isActive: DataTypes.INTEGER,
-    type:DataTypes.INTEGER
+  NotAvailableSubGroupTimes.init({
+    groupID: DataTypes.INTEGER,
+    subGroupID: DataTypes.STRING,
+    extendSubGroup: DataTypes.STRING,
+    dayIDs: DataTypes.STRING,
+    timeFrom: DataTypes.STRING,
+    timeTo: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'WorkingData',
+    modelName: 'NotAvailableSubGroupTimes',
   });
-
-
-
-  return WorkingData;
+  return NotAvailableSubGroupTimes;
 };
