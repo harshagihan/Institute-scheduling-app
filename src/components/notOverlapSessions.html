@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="../styles/font-awesome-5.15.3/font-awesome.css" />
     <link rel="stylesheet" href="../styles/css/slider-custom.css" />
-<!--    <link rel="stylesheet" href="../public/jConfirm/jquery-confirm.min.css" />-->
-<!--    <link rel="stylesheet" href="../public/jtoaster/jquery.toast.min.css" />-->
     <link rel="stylesheet" href="../styles/jquery/jquery.css" />
     <link rel="stylesheet" href="../styles/jquery/jquery-toaster.css" />
-<!--    <link rel="stylesheet" href="../public/datatable/jquery.dataTables.min.css" />-->
+    <!--    <link rel="stylesheet" href="../styles/datatable/jquery.dataTables.min.css" />-->
     <link rel="stylesheet" href="../styles/css/back-button-custom.css" />
     <link rel="stylesheet" href="../styles/css/custom-back.css" />
+
 
 </head>
 <body>
@@ -27,7 +26,7 @@
             <div class="w-100 title-custom form-inline">
                 <button type="button" class="btn btn-warning btn-arrow-left" style="margin-left: 6%;" onclick="window.location.href='./sessionsSettingsHome.html'">Back</button>
 
-                <h2 class="title-font-custom">Consecutive Sessions</h2>
+                <h2 class="title-font-custom">Not Overlap Sessions</h2>
             </div>
             <div>
                 <div class="card margin-1-custom">
@@ -35,13 +34,16 @@
 
                         <button type="button" class="btn btn-success float-right mb-2" onclick="LoadSessionTable(null)">Add New</button>
 
-                        <table id="tblConsecutiveSessions" class="display" style="width:100%">
+                        <table id="tblOverlapSessions" class="display" style="width:100%">
                             <thead>
                             <tr>
                                 <th>Programme</th>
                                 <th>Session 1</th>
                                 <th>Session 2</th>
                                 <th>Session 3</th>
+                                <th>Session 4</th>
+                                <th>Session 5</th>
+                                <th>Session 6</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -73,16 +75,30 @@
 </script>
 
 <!-- normal script imports etc  -->
-<link rel="stylesheet" href="../index.css" />
-<link rel="stylesheet" href="../styles/bootstrap/bootstrap.css" />
-<link rel="stylesheet" href="../styles/font-awesome-5.15.3/font-awesome.css" />
-<link rel="stylesheet" href="../styles/css/slider-custom.css" />
-<link rel="stylesheet" href="../styles/jquery/jquery.css" />
-<link rel="stylesheet" href="../styles/jquery/jquery-toaster.css" />
-<!--    <link rel="stylesheet" href="../styles/datatable/jquery.dataTables.min.css" />-->
-<link rel="stylesheet" href="../styles/css/back-button-custom.css" />
-<link rel="stylesheet" href="../styles/css/custom-back.css" />
+<script src="../styles/jquery.min.js"></script>
+<script src="../styles/basics.min.js"></script>
+<script src="../styles/bootstrap/bootstrap.min.js"></script>
+<script src="../styles/script/slider-custom.js"></script>
+<script src="../styles/jquery/jquery-stable.js"></script>
+<script src="../styles/jquery/jquery.toaster.js"></script>
+<!--<script src="../styles/datatable/jquery.dataTables.min.js"></script>-->
 
+<!-- Insert this line after script imports -->
+<script>
+    if (typeof module === "object") {
+        window.module = module;
+        module = undefined;
+    }
+</script>
+
+<!-- normal script imports etc  -->
+<script src="../styles/jquery.min.js"></script>
+<script src="../styles/basics.min.js"></script>
+<script src="../styles/bootstrap/bootstrap.min.js"></script>
+<script src="../styles/script/slider-custom.js"></script>
+<script src="../styles/jquery/jquery-stable.js"></script>
+<script src="../styles/jquery/jquery.toaster.js"></script>
+<!--<script src="../styles/datatable/jquery.dataTables.min.js"></script>-->
 
 <!-- Insert this line after script imports -->
 <script>
@@ -95,7 +111,7 @@
 
     const {generateSessionDetailObjects,
         generateNotAvailableSessionObjects,
-        generateConsecutiveSessions
+        generateOverlapSessions
     } = require("../services/applicationServices/commonServices");
 
     $(window).on("load", function () {
@@ -112,10 +128,10 @@
     });
 
     function LoadTable(){
-        const dataSet = generateConsecutiveSessions(ipcRenderer);
+        const dataSet = generateOverlapSessions(ipcRenderer);
 
         // table filling and initializing as data-table
-        $("#tblConsecutiveSessions").DataTable ({
+        $("#tblOverlapSessions").DataTable ({
             "data" : dataSet,
             "ordering": true,
             "order": [[0, 'asc']],
@@ -124,6 +140,9 @@
                 { "data" : "Session1Name" },
                 { "data" : "Session2Name" },
                 { "data" : "Session3Name" },
+                { "data" : "Session4Name" },
+                { "data" : "Session5Name" },
+                { "data" : "Session6Name" },
                 { 'data': null, className: 'text-center no-sort', 'render': function (data, type, row) {
                         return `<button type="botton" class="btn btn-warning btn-header" onclick=LoadSessionTable("${data.id}")><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>`
                     }
@@ -138,7 +157,7 @@
 
     function LoadSessionTable(id){
         $.confirm({
-            title: 'Select Session (can select maximum 3)',
+            title: 'Select not overlap Session(s) (can select maximum 6)',
             columnClass: 'col-md-12',
             content: `
                 <div>
@@ -189,22 +208,28 @@
                             return false;
                         }
 
-                        const sessionIDs = [0,0,0];
+                        const sessionIDs = [0,0,0,0,0,0];
                         $.each(selectedSession, function(i, item) {
                             sessionIDs[i] = item.id;
                         });
                         if(id === null){
-                            ipcRenderer.sendSync('consecutiveSessions:add', {
+                            ipcRenderer.sendSync('notOverlapSession:add', {
                                 session1ID:sessionIDs[0],
                                 session2ID:sessionIDs[1],
-                                session3ID : sessionIDs[2]
+                                session3ID : sessionIDs[2],
+                                session4ID : sessionIDs[3],
+                                session5ID : sessionIDs[4],
+                                session6ID : sessionIDs[5],
                             });
                         }else{
-                            ipcRenderer.sendSync('consecutiveSessions:update', {
+                            ipcRenderer.sendSync('notOverlapSession:update', {
                                 id,
                                 session1ID:sessionIDs[0],
                                 session2ID:sessionIDs[1],
-                                session3ID : sessionIDs[2]
+                                session3ID : sessionIDs[2],
+                                session4ID : sessionIDs[3],
+                                session5ID : sessionIDs[4],
+                                session6ID : sessionIDs[5],
                             });
                         }
 
@@ -268,7 +293,7 @@
 
                     });
 
-                    if(counter >= 3){
+                    if(counter >= 6){
                         $('.checkbox-c').each(function (){
                             const checkChecked = this.checked;
                             if(!checkChecked)
@@ -284,14 +309,20 @@
                 }
 
                 if(id !== null){
-                    const session = ipcRenderer.sendSync('consecutiveSessions:getByID', id);
+                    const session = ipcRenderer.sendSync('notOverlapSession:getByID', id);
 
                     if(session.length === 0)
                         return ;
 
                     $('.checkbox-c').each(function (){
                         const sessionID = Number($(this).attr('session'));
-                        if(sessionID === session[0].session1ID || sessionID === session[0].session2ID || sessionID === session[0].session3ID){
+                        if(sessionID === session[0].session1ID ||
+                            sessionID === session[0].session2ID ||
+                            sessionID === session[0].session3ID ||
+                            sessionID === session[0].session4ID ||
+                            sessionID === session[0].session5ID ||
+                            sessionID === session[0].session6ID
+                        ){
                             $(this).prop('checked', true);
                         }
 
@@ -306,11 +337,11 @@
     }
 
     function ReloadTable(){
-        if ( $.fn.DataTable.isDataTable('#tblConsecutiveSessions') ) {
-            $('#tblConsecutiveSessions').DataTable().destroy();
+        if ( $.fn.DataTable.isDataTable('#tblOverlapSessions') ) {
+            $('#tblOverlapSessions').DataTable().destroy();
         }
 
-        $('#tblConsecutiveSessions tbody').empty();
+        $('#tblOverlapSessions tbody').empty();
         LoadTable();
     }
 
@@ -323,7 +354,7 @@
                     text: 'confirm', // text for button
                     btnClass: 'btn-danger', // class for the button
                     action: function(){
-                        ipcRenderer.sendSync('consecutiveSessions:remove', id);
+                        ipcRenderer.sendSync('notOverlapSession:remove', id);
 
                         ReloadTable();
                     }
