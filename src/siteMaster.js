@@ -100,7 +100,7 @@ const navBar = `
                     </a>
                 </li>
                 <li>
-                 <a href="">
+                 <a href="./location.html">
                        <i class="fa fa-location-arrow mr-3"></i>
                         <span class="nav-text">
                             Location
