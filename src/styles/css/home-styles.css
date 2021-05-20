@@ -3,7 +3,7 @@
     margin: 5px;
     padding: 20px 10px;
     background-color: #fff;
-    height: 100px;
+    height: 300px;
     border-radius: 5px;
     transition: .3s linear all;
 }
@@ -34,8 +34,9 @@
 }
 
 .card-counter i{
-    font-size: 5em;
+    font-size: 10em;
     opacity: 0.2;
+
 }
 
 .card-counter .count-numbers{
@@ -55,4 +56,5 @@
     opacity: 0.5;
     display: block;
     font-size: 18px;
+    font-weight: 700;
 }
