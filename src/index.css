@@ -203,11 +203,15 @@ textarea, label {
     width: 100%;
     height: -webkit-calc(100vh - 4px);
     height: -moz-calc(100vh - 4px);
-    height: calc(100vh - 4px); }
+    height: calc(100vh - 4px);
+
+}
 
 .pt-tablecell {
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+
+}
 
 .overlay {
     position: absolute;
@@ -316,7 +320,9 @@ textarea, label {
 -------------------------------------------------*/
 .mt20{margin-top:20px;}
 .site-wrapper {
-    border-top: 4px solid #ff0037; }
+    border-top: 4px solid #ff0037;
+
+}
 
 .page-close {
     font-size: 30px;

@@ -1,81 +1,66 @@
-body{
-    baackground:#f5f5f5;
-    margin-top:20px;}
+body{margin-top:20px;}
 
-.events-date {
-    text-align: center;
+ul.notes li {
+    margin: 10px 60px 50px 0px;
+    float: left;
+}
+
+ul.notes li, ul.tag-list li {
+    list-style: none;
+}
+
+ul.notes li div small {
     position: absolute;
-    right: 30px;
-    top: 30px;
-    background-color: rgba(25, 47, 89, 0.9);
-    color: #fff;
-    padding: 12px 20px 8px 20px;
-    text-transform: uppercase
+    top: 5px;
+    right: 5px;
+    font-size: 10px;
 }
 
-.event-time li {
-    display: inline-block;
-    margin-right: 20px
+div.rotate-1 {
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
 }
 
-.event-time li:last-child {
-    margin-right: 0
+div.rotate-2 {
+    -o-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    position: relative;
+    top: 5px;
 }
 
-.event-time li i {
-    color: #59c17a
+.lazur-bg {
+    background-color: #23c6c8;
+    color: #ffffff;
 }
 
-.event-block {
-    box-shadow: 0px 0px 16px 0px rgba(187, 187, 187, 0.48)
+.red-bg {
+    background-color: #ed5565;
+    color: #ffffff;
 }
 
-.event-block ul li i {
-    color: #59c17a
+.navy-bg {
+    background-color: #1ab394;
+    color: #ffffff;
 }
 
-@media screen and (max-width: 1199px) {
-    .event-date {
-        padding: 10px 18px 6px 18px
-    }
+.yellow-bg {
+    background-color: #f8ac59;
+    color: #ffffff;
 }
 
-@media screen and (max-width: 575px) {
-    .event-date {
-        padding: 8px 15px 4px 15px
-    }
-    .events-date {
-        padding: 10px 15px 6px 15px
-    }
-}
-
-.position-relative {
-    position: relative !important;
-}
-
-.margin-40px-bottom {
-    margin-bottom: 40px;
-}
-.padding-60px-lr {
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.margin-15px-bottom {
-    margin-bottom: 15px;
-}
-.font-weight-500 {
-    font-weight: 500;
-}
-.font-size22 {
-    font-size: 22px;
-}
-.text-theme-color {
-    color: #192f59;
-}
-.margin-10px-bottom {
-    margin-bottom: 10px;
-}
-.margin-10px-right {
-    margin-right: 10px;
+ul.notes li div {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    height: 400px;
+    width: 400px;
+    padding: 1em;
+    -moz-box-shadow: 5px 5px 7px #212121;
+    -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    -moz-transition: -moz-transform 0.15s linear;
+    -o-transition: -o-transform 0.15s linear;
+    -webkit-transition: -webkit-transform 0.15s linear;
 }
