@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Schedule App</title>
+    <title>ABC Institute App</title>
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../public/boostrap/bootstrap.min.css" />
     <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../public/style/slider-custom.css" />
     <link rel="stylesheet" href="../public/style/back-button-custom.css" />
-<!--    <link rel="stylesheet" href="../public/style/notavailablehome.css" />-->
+    <link rel="stylesheet" href="../public/style/generalsettinghome.css" />
     <link rel="stylesheet" href="../public/jConfirm/jquery-confirm.min.css" />
     <link rel="stylesheet" href="../public/jtoaster/jquery.toast.min.css" />
     <link rel="stylesheet" href="../public/datatable/jquery.dataTables.min.css" />
@@ -29,56 +29,63 @@
 
     <div id="navBarID" class="wrapper d-flex align-items-stretch" style="height: 100%">
 
-
         <!-- Page Content  -->
         <div class="w-100">
             <div class="w-100 title-custom">
                 <h2 class="title-font-custom">General Settings</h2>
             </div>
             <!-- Page Body -->
-            <div>
-                <div class="section-block-grey">
-                    <div class="container">
-
-                        <div class="row mt-60">
-                            <div class="col-md-4 col-sm-12 col-12"  style="cursor: pointer; min-height: 500px;" onclick="window.location.href='notAvailableHome.html'">
-                                <div class="serv-section-2">
-                                    <div class="serv-section-2-icon">  <i class="fa fa-calendar"></i>  </div>
-                                    <div class="serv-section-desc">
-                                        <h4>Not Available Times</h4>
-                                        </br>
-                                        <h5>Lecturers</h5>
-                                        <h5>Sessions</h5>
-                                        <h5>Groups</h5>
-                                        <h5>Sub-Groups</h5></div>
-                                    </br>
-                                </div>
-                            </div>
-
-                            <div class="row mt-20"></div>
-                            <div class="col-md-4 col-sm-12 col-12" style="cursor: pointer; min-height: 500px;" onclick="window.location.href='sessionsSettingsHome.html'" >
-                                <div class="serv-section-2 serv-section-2-act">
-                                    <div class="serv-section-2-icon serv-section-2-icon-act"> <i class="fa fa-list"></i> </div>
-                                    <div class="serv-section-desc">
-                                        <h4>Sessions Management</h4>
-                                        </br>
-                                        <h5>Consecutive Sessions</h5>
-                                        </br>
-                                        <h5>Parallel Sessions</h5>
-                                        </br>
-                                        <h5>Not Overlap Sessions</h5>
-                                    </div>
-                                </div>
-
-
+            <div class="container">
+                <!-- start event block -->
+                <br/>
+                <br/>
+                <div class="row align-items-center event-block no-gutters margin-40px-bottom">
+                    <div class="col-lg-5 col-sm-12">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/450x280/FFB6C1/000000" alt="">
+                            <div class="events-date">
+                                <div class="font-size28">10</div>
+                                <div class="font-size14">Mar</div>
                             </div>
                         </div>
-
                     </div>
-
-
-
+                    <div class="col-lg-7 col-sm-12">
+                        <div class="padding-60px-lr md-padding-50px-lr sm-padding-30px-all xs-padding-25px-all">
+                            <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500"><a href="event-details.html" class="text-theme-color">Business Conference</a></h5>
+                            <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
+                            </ul>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore</p>
+                            <a class="butn small margin-10px-top md-no-margin-top" href="event-details.html">Read More <i class="fas fa-long-arrow-alt-right margin-10px-left"></i></a>
+                        </div>
+                    </div>
                 </div>
+                <!-- end event block -->
+
+                <!-- start event block -->
+                <div class="row align-items-center event-block no-gutters margin-40px-bottom">
+                    <div class="col-lg-7 order-2 order-lg-1">
+                        <div class="padding-60px-lr md-padding-50px-lr sm-padding-30px-all xs-padding-25px-all">
+                            <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500"><a href="event-details.html" class="text-theme-color">Craft Workshops</a></h5>
+                            <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
+                                <li><i class="far fa-clock margin-10px-right"></i> 09:00 AM - 09:30 PM</li>
+                                <li><i class="fas fa-user margin-5px-right"></i> Speaker : Alexa Zone</li>
+                            </ul>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore</p>
+                            <a class="butn small margin-10px-top md-no-margin-top" href="event-details.html">Read More <i class="fas fa-long-arrow-alt-right margin-10px-left"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 order-1 order-lg-2">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/450x280/87CEFA/000000" alt="">
+                            <div class="events-date">
+                                <div class="font-size28">25</div>
+                                <div class="font-size14">Feb</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end event block -->
+
             </div>
 
         </div>
