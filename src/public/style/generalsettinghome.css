@@ -17,12 +17,14 @@ ul.notes li div small {
 }
 
 div.rotate-1 {
+    border-radius: 10px;
     -webkit-transform: rotate(-6deg);
     -o-transform: rotate(-6deg);
     -moz-transform: rotate(-6deg);
 }
 
 div.rotate-2 {
+    border-radius: 10px;
     -o-transform: rotate(4deg);
     -webkit-transform: rotate(4deg);
     -moz-transform: rotate(4deg);
@@ -63,4 +65,24 @@ ul.notes li div {
     -moz-transition: -moz-transform 0.15s linear;
     -o-transition: -o-transform 0.15s linear;
     -webkit-transition: -webkit-transform 0.15s linear;
+}
+
+.serv-section-2 {
+    position: relative;
+    border: 1px solid #eee;
+    background: #E69099;
+    box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.serv-section-3 {
+    position: relative;
+    border: 1px solid #eee;
+    background: #F5C48F;
+    box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
 }
