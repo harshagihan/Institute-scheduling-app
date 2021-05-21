@@ -34,7 +34,7 @@ const navBar = `
                     
                 </li>
                 <li class="has-subnav">
-                    <a href="./workingDaysHrs.html">
+                    <a href="./workingDaysHours.html">
                        <i class="fa fa-briefcase mr-3"></i>
                         <span class="nav-text">
                             Working days and hours
