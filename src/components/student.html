@@ -2,15 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>ABC Schedule App</title>
+    <title>ABC Institute App</title>
     <link rel="stylesheet" href="../index.css" />
-    <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="../styles/font-awesome-5.15.3/font-awesome.css" />
-    <link rel="stylesheet" href="../styles/css/slider-custom.css" />
-    <link rel="stylesheet" href="../styles/css/studenthome.css" />
-    <link rel="stylesheet" href="../styles/jquery/jquery.css" />
-    <link rel="stylesheet" href="../styles/jquery/jquery-toaster.css" />
-<!--    <link rel="stylesheet" href="../styles/datatable/jquery.dataTables.min.css" />-->
+    <link rel="stylesheet" href="../public/boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../public/style/slider-custom.css" />
+    <link rel="stylesheet" href="../public/style/back-button-custom.css" />
+    <link rel="stylesheet" href="../public/style/academicyear.css" />
+    <link rel="stylesheet" href="../public/jConfirm/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../public/jtoaster/jquery.toast.min.css" />
+    <link rel="stylesheet" href="../public/datatable/jquery.dataTables.min.css" />
+
+
     <style>
         .my-card
         {
@@ -21,13 +24,11 @@
         }
     </style>
 
-
 </head>
 <body>
 <div class="row" style="position: relative;width: calc(100vw - 2px);height: 100%;">
 
     <div id="navBarID" class="wrapper d-flex align-items-stretch" style="height: 100%">
-
 
         <!-- Page Content  -->
         <div class="w-100">
@@ -35,51 +36,79 @@
                 <h2 class="title-font-custom">Student</h2>
             </div>
             <!-- Page Body -->
-            <div>
-                <div class="card margin-1-custom">
-                    <div class="jumbotron">
-                        <div class="row w-100">
-                            <div class="col-md-3">
-                                <div class="card border-info mx-sm-1 p-3" style="cursor: pointer; min-height: 500px;" onclick="window.location.href='academicYearandSemester.html'">
-                                    <div class="card border-info shadow text-info p-3 my-card" ><span class="fa fa-calendar" aria-hidden="true"></span></div>
-                                    <div class="text-info text-center mt-3"><h4></h4></div>
-                                    <div class="text-info text-center mt-2"><h4>Academic Year and Semester</h4></br></br><h6>Preview</h6><br><h6>Y1.S1</h6></br><h6>Y1.S2</h6><br></div>
-
+            <div class="container">
+                <div class="main-body">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm">
+                        <div class="col mb-3">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <img src="../public/images/academicyear.png" style="width:100px;margin-top:-65px" alt="User" class="img-fluid img-thumbnail rounded-circle border-0 mb-3">
+                                    <h5 class="card-title">Year and Semester</h5>
+                                    <p class="text-secondary mb-1">Preview</p>
+                                    <p class="text-muted font-size-sm"> (Y1.S1)</p>
+                                    <p class="text-muted font-size-sm"> (Y1.S2)</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-light btn-sm bg-white has-icon btn-block" type="button" onclick="window.location.href='academicYearandSemester.html'">Go Inside</button>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card border-success mx-sm-1 p-3" style="cursor: pointer; min-height: 500px;" onclick="window.location.href='programme.html'">
-                                    <div class="card border-success shadow text-success p-3 my-card"><span class="fa fa-list" aria-hidden="true"></span></div>
-                                    <div class="text-success text-center mt-3"><h4></h4></div>
-                                    <div class="text-success text-center mt-2"><h4>Programs</h4></br></br></br><h6>Preview</h6><br><h6>Y1.S1.IT</h6></br><h6>Y1.S2.IT</h6><br></div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <img src="../public/images/book.jpg" style="width:100px;margin-top:-65px" alt="User" class="img-fluid img-thumbnail rounded-circle border-0 mb-3">
+                                    <h5 class="card-title">Program</h5>
+                                    <p class="text-secondary mb-1">Preview</p>
+                                    <p class="text-muted font-size-sm">(Y1.S1.IT)</p>
+                                    <p class="text-muted font-size-sm">(Y1.S1.SE)</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-light btn-sm bg-white has-icon btn-block" type="button" onclick="window.location.href='programme.html'">Go Inside</button>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card border-danger mx-sm-1 p-3" style="cursor: pointer; min-height: 500px;" onclick="window.location.href='groupNumbers.html'">
-                                    <div class="card border-danger shadow text-danger p-3 my-card" ><span class="fa fa-users" aria-hidden="true"></span></div>
-                                    <div class="text-danger text-center mt-3"><h4></h4></div>
-                                    <div class="text-danger text-center mt-2"><h4>Groups</h4></br></br></br><h6>Preview</h6><br><h6>Y1.S1.IT.01</h6></br><h6>Y1.S2.IT.02</h6><br></div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <img src="../public/images/group.jpg" style="width:100px;margin-top:-65px" alt="User" class="img-fluid img-thumbnail rounded-circle border-0 mb-3">
+                                    <h5 class="card-title">Group</h5>
+                                    <p class="text-secondary mb-1">Preview</p>
+                                    <p class="text-muted font-size-sm">(Y1.S1.IT.01)</p>
+                                    <p class="text-muted font-size-sm">(Y1.S1.IT.02)</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-light btn-sm bg-white has-icon btn-block" type="button" onclick="window.location.href='groupNumbers.html'">Go Inside</button>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card border-warning mx-sm-1 p-3" style="cursor: pointer; min-height: 500px;" onclick="window.location.href='subGroups.html'">
-                                    <div class="card border-warning shadow text-warning p-3 my-card" ><span class="fa fa-users" aria-hidden="true"></span></div>
-                                    <div class="text-warning text-center mt-3"><h4></h4></div>
-                                    <div class="text-warning text-center mt-2"><h4>Sub Groups</h4></br></br></br><h6>Preview</h6><br><h6>Y1.S1.IT.01.01</h6></br><h6>Y1.S2.IT.01.02</h6><br></div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <img src="../public/images/subgroups.jpg" style="width:100px;margin-top:-65px" alt="User" class="img-fluid img-thumbnail rounded-circle border-0 mb-3">
+                                    <h5 class="card-title">Sub Group</h5>
+                                    <p class="text-secondary mb-1">Preview</p>
+                                    <p class="text-muted font-size-sm">(Y1.S1.IT.01.01)</p>
+                                    <p class="text-muted font-size-sm">(Y1.S1.IT.01.02)</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-light btn-sm bg-white has-icon btn-block" type="button" onclick="window.location.href='subGroup.html'">Go Inside</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </div>
-
-
 
 </body>
 
@@ -92,17 +121,14 @@
 </script>
 
 <!-- normal script imports etc  -->
-<script src="../styles/jquery.min.js"></script>
-<script src="../styles/basics.min.js"></script>
-<script src="../styles/bootstrap/bootstrap.min.js"></script>
-<script src="../styles/script/slider-custom.js"></script>
-<script src="../styles/jquery/jquery-stable.js"></script>
-<script src="../styles/jquery/jquery.toaster.js"></script>
-<!--<script src="../styles/datatable/jquery.dataTables.min.js"></script>-->
-<!--<script src="../styles/Chart.min.js"></script>-->
-
-
-
+<script src="../public/jquery.min.js"></script>
+<script src="../public/popper.min.js"></script>
+<script src="../public/boostrap/bootstrap.min.js"></script>
+<script src="../public/script/slider-custom.js"></script>
+<script src="../public/jConfirm/jquery-confirm.min.js"></script>
+<script src="../public/jtoaster/jquery.toast.min.js"></script>
+<script src="../public/datatable/jquery.dataTables.min.js"></script>
+<script src="../public/Chart.min.js"></script>
 
 <!-- Insert this line after script imports -->
 <script>

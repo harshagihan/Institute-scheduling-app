@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Schedule App</title>
+    <title>ABC Institute App</title>
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../public/boostrap/bootstrap.min.css" />
     <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css" />
@@ -204,7 +204,6 @@
                         <label>Enter Room Type</label>
                         <input type="text" placeholder="Room Type" class="type form-control" required />
 
-                
                     </div>
                 </div>`,
             buttons: {
@@ -220,6 +219,7 @@
                         let center = this.$content.find('.center').val();
                         let building = this.$content.find('.building').val();
                         let tag = this.$content.find('.type').val();
+                        // let tag = this.$content.find('.tag').val();
 
                         //check the name is not empty value
                         if (!roomName) {
@@ -238,13 +238,9 @@
                             $.alert('Select a valid building name');
                             return false;
                         } else building = Number(building);
-                        if (!type) {
-                            $.alert('Select a valid type name');
-                            return false;
-                        } else type = Number(type);
 
                         //saving room to the database
-                        ipcRenderer.sendSync('room:add', { roomName, capacity, center, building, type });
+                        ipcRenderer.sendSync('room:add', { roomName, capacity, center, building });
 
                         // reload the table
                         ReloadTable();
@@ -276,7 +272,6 @@
                             </tr>
                             </thead>
                             <tbody>
-
                             </tbody>
                         </table>
                 </div>`,
@@ -543,7 +538,6 @@
                              <label>Select sub group(s)</label>
                             ${groupSelection}
                           </div>
-
                     </div>
                 </div>`,
             buttons: {
@@ -675,10 +669,8 @@
                     <div class="form-group">
                         <label>Enter room name</label>
                         <input type="text" placeholder="Room name" class="roomName form-control" required />
-
                         <label>Enter max. capacity</label>
                         <input type="number" placeholder="Capacity" class="capacity form-control" required />
-
                         <label>Select center</label>
                         ${centerSelection}
                         <label>Select building</label>
@@ -767,3 +759,4 @@
 </script>
 
 </html>
+    

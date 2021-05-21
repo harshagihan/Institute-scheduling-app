@@ -2,18 +2,16 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Schedule App</title>
+    <title>ABC Institute App</title>
     <link rel="stylesheet" href="../index.css" />
-    <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="../styles/font-awesome-5.15.3/font-awesome.css" />
-    <link rel="stylesheet" href="../styles/css/slider-custom.css" />
-    <!--    <link rel="stylesheet" href="../public/jConfirm/jquery-confirm.min.css" />-->
-    <!--    <link rel="stylesheet" href="../public/jtoaster/jquery.toast.min.css" />-->
-    <link rel="stylesheet" href="../styles/jquery/jquery.css" />
-    <link rel="stylesheet" href="../styles/jquery/jquery-toaster.css" />
-    <!--    <link rel="stylesheet" href="../public/datatable/jquery.dataTables.min.css" />-->
-    <link rel="stylesheet" href="../styles/css/back-button-custom.css" />
-    <link rel="stylesheet" href="../styles/css/custom-back.css" />
+    <link rel="stylesheet" href="../public/boostrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../public/style/slider-custom.css" />
+    <link rel="stylesheet" href="../public/style/back-button-custom.css" />
+    <link rel="stylesheet" href="../public/style/generalsettinghome.css" />
+    <link rel="stylesheet" href="../public/jConfirm/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../public/jtoaster/jquery.toast.min.css" />
+    <link rel="stylesheet" href="../public/datatable/jquery.dataTables.min.css" />
     <style>
         .my-card
         {
@@ -31,58 +29,52 @@
 
     <div id="navBarID" class="wrapper d-flex align-items-stretch" style="height: 100%">
 
-
         <!-- Page Content  -->
         <div class="w-100">
             <div class="w-100 title-custom">
                 <h2 class="title-font-custom">General Settings</h2>
             </div>
-            <!-- Page Body -->
-            <div>
-                <div class="section-block-grey">
-                    <div class="container">
-
-                        <div class="row mt-60">
-                            <div class="col-md-4 col-sm-12 col-12"  style="cursor: pointer; min-height: 500px;" onclick="window.location.href='notAvailableHome.html'">
-                                <div class="serv-section-2">
-                                    <div class="serv-section-2-icon">  <i class="fa fa-calendar"></i>  </div>
-                                    <div class="serv-section-desc">
-                                        <h4>Not Available Times</h4>
-                                        </br>
-                                        <h5>Lecturers</h5>
-                                        <h5>Sessions</h5>
-                                        <h5>Groups</h5>
-                                        <h5>Sub-Groups</h5></div>
-                                    </br>
-                                </div>
-                            </div>
-
-                            <div class="row mt-20"></div>
-                            <div class="col-md-4 col-sm-12 col-12" style="cursor: pointer; min-height: 500px;" onclick="window.location.href='sessionsSettingsHome.html'" >
-                                <div class="serv-section-2 serv-section-2-act">
-                                    <div class="serv-section-2-icon serv-section-2-icon-act"> <i class="fa fa-list"></i> </div>
-                                    <div class="serv-section-desc">
-                                        <h4>Sessions Management</h4>
-                                        </br>
-                                        <h5>Consecutive Sessions</h5>
-                                        </br>
-                                        <h5>Parallel Sessions</h5>
-                                        </br>
-                                        <h5>Not Overlap Sessions</h5>
-                                    </div>
-                                </div>
 
 
+            <br/>
+            <br/>
+            <br/>
+
+
+        <div class="container bootstrap snippets bootdey" style="margin-left: 145px">
+            <div class="row">
+                <ul class="notes" >
+                    <li>
+                        <div class="rotate-2 red-bg" onclick="window.location.href='sessionsSettingsHome.html'" >
+                            <br/>
+                            <br/>
+                            <div class="serv-section-2">
+                            <h3 align="center"><b>Session Management</b></h3>
+                            <br/>
+                            <br/>
+                            <h5 align="center">Consecutive Sessions</h5>
+                            <h5 align="center">Parallel Sessions</h5>
+                            <h5 align="center">Not Overlap Sessions</h5>
                             </div>
                         </div>
-
-                    </div>
-
-
-
-                </div>
+                    </li>
+                    <li>
+                        <div class="rotate-1 yellow-bg" onclick="window.location.href='notAvailableHome.html'">
+                            <br/>
+                            <br/>
+                            <div class="serv-section-3">
+                            <h3 align="center"><b>Not Available Times</b></h3>
+                            <br/>
+                            <br/>
+                            <h5 align="center">Lecturers</h5>
+                            <h5 align="center">Sessions</h5>
+                            <h5 align="center">Groups</h5>
+                            <h5 align="center">Sub-Groups</h5>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-
         </div>
     </div>
 

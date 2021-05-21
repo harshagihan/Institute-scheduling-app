@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Schedule App</title>
+    <title>ABC Institute App</title>
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../public/boostrap/bootstrap.min.css" />
     <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../public/style/slider-custom.css" />
+    <link rel="stylesheet" href="../public/style/statictics.css" />
 </head>
 <body>
 <div class="row" style="position: relative;width: calc(100vw - 2px);height: 100%;">
@@ -16,43 +17,116 @@
         <!-- Page Content  -->
         <div class="w-100">
             <div class="w-100 title-custom">
-                <h2 class="title-font-custom">Timetables</h2>
+                <h2 class="title-font-custom">Statistics</h2>
             </div>
             <div>
-                <div class="card margin-1-custom">
-                    <div class="card-body">
-                        <table id="tagTable" class="display" style="width:100%">
-                            <thead>
-                            <tr>
-                                <th>Type</th>
-                                <th>View</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Statistics related to lecturers</td>
-                                <td><button type="button" class="btn btn-link" onclick='window.location.href="lectureStatistics.html"'>View</button></td>
-                            </tr>
-                            <tr>
-                                <td>Statistics related to students</td>
-                                <td><button type="button" class="btn btn-link" onclick='window.location.href="studentStatistics.html"'>View</button></td>
-                            </tr>
-                            <tr>
-                                <td>Statistics related to subjects</td>
-                                <td><button type="button" class="btn btn-link" onclick='window.location.href="subjectStatistics.html"'>View</button></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <div class="container">
+                    <div class="mt-5">
+                        <div class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-blue btn-h-outline-blue btn-a-outline-blue w-100 my-2 py-3 shadow-sm">
+                            <!-- Basic Plan -->
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-4">
+                                    <h4 class="pt-3 text-170 text-600 text-primary-d1 letter-spacing">
+                                        Lecturers
+                                    </h4>
+
+                                    <div class="text-secondary-d1 text-120">
+
+                                    </div>
+                                </div>
+
+                                <ul class="list-unstyled mb-0 col-12 col-md-4 text-dark-l1 text-90 text-left my-4 my-md-0">
+                                    <li>
+                                        <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                                        <span>
+                <span class="text-110">Statistics related to lecturers</span>
+              </span>
+                                    </li>
+
+                                </ul>
+
+                                <div class="col-12 col-md-4 text-center">
+                                    <a href="lectureStatistics.html" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">View</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="d-style bgc-white btn btn-brc-tp btn-outline-green btn-h-outline-green btn-a-outline-green w-100 my-2 py-3 shadow-sm border-2">
+                            <!-- Pro Plan -->
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-4">
+                                    <h4 class="pt-3 text-170 text-600 text-green-d1 letter-spacing">
+                                        Students
+                                    </h4>
+
+                                    <div class="text-secondary-d2 text-120">
+                                        <div class="text-danger-m3 text-90 mr-1 ml-n4 pos-rel d-inline-block">
+
+                                            <span>
+                    <span class="d-block rotate-45 position-l mt-n475 ml-35 fa-2x text-400 border-l-2 h-5 brc-dark-m1"></span>
+                </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <ul class="list-unstyled mb-0 col-12 col-md-4 text-dark-l1 text-90 text-left my-4 my-md-0">
+                                    <li>
+                                        <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                                        <span>
+                <span class="text-110">Statistics related to students</span>
+              </span>
+                                    </li>
+                                </ul>
+
+                                <div class="col-12 col-md-4 text-center">
+                                    <a href="studentStatistics.html" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">View</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-purple btn-h-outline-purple btn-a-outline-purple w-100 my-2 py-3 shadow-sm">
+                            <!-- Premium Plan -->
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-4">
+                                    <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
+                                        Subjects
+                                    </h4>
+
+                                    <div class="text-secondary-d1 text-120">
+
+                                    </div>
+                                </div>
+
+                                <ul class="list-unstyled mb-0 col-12 col-md-4 text-dark-l1 text-90 text-left my-4 my-md-0">
+                                    <li>
+                                        <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                                        <span>
+                <span class="text-110">Statistics related to subjects</span>
+              </span>
+                                    </li>
+
+                                </ul>
+
+                                <div class="col-12 col-md-4 text-center">
+                                    <a href="subjectStatistics.html" class="f-n-hover btn btn-warning btn-raised px-4 py-25 w-75 text-600">View</a>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+
             </div>
+
+
         </div>
-
-    </div>
-
-</div>
-
-
 
 </body>
 
