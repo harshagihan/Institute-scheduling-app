@@ -1,3 +1,4 @@
+
 // all the building database operations are initialized in here
 
 const { Buildings, sequelize } = require('../models/index'); //import the building model
